@@ -6,12 +6,12 @@
 	<script src="app.js"></script>
     <title>AngularJS Module 1</title>
 </head>
-<body>
+<body ng-app="LunchCheck">
    <center><h1>AngularJS Module 1 - Solution</h1></center> 
-    <div>
-        <input id="Text1" type="text"  placeholder="Enter Favourite Lunch" />
-        <input id="Button1" type="button" value="Check if Too Much" />
+    <div ng-controller="LunchCheckController">
+        <input type="text"  placeholder="Enter Favourite Lunch" ng-model="LunchCheck"/>
+        <input type="button" value="Check if Too Much" ng-click="Check()"/><br />
+        <p ng-style="msgstyle">{{message}}</p>
     </div>
-    <div></div>
 </body>
 </html>
