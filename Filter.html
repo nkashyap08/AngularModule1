@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta charset="utf-8" />
+	<script src="angular.min.js"></script>
+	<script src="filterapp.js"></script>
+    <title>AngularJS Module 1 - Filter</title>
+</head>
+<body ng-app="FilterCheck">
+   <center><h1>AngularJS Module 1 - Filter</h1></center> 
+    <div ng-controller="FilterCheckController">
+        <input type="text"  placeholder="Enter Your Name" ng-model="FilterCheck"/>
+        <input type="button" value="Check" ng-click="Check()"/><br />
+        <p ng-style="msgstyle">{{message}}</p>
+        <p ng-style="namestyle">{{name | uppercase}}</p>
+    </div>
+</body>
+</html>
