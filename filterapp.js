@@ -21,7 +21,7 @@
                 $scope.name = "";
             }
             else {
-                $scope.message = "";
+                    $scope.message = "";
                     $scope.namestyle = { "color": "Green" };
                     $scope.name = "Hi!! " + $scope.FilterCheck;
                 
