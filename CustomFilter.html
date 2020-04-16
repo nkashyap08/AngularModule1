@@ -12,7 +12,9 @@
         <input type="text"  placeholder="Enter Your Name" ng-model="FilterCheck"/>
         <input type="button" value="Check" ng-click="Check()"/><br />
         <p ng-style="msgstyle">{{message}}</p>
+        <p ng-style="namestyle">{{orgname}}</p>
         <p ng-style="namestyle">{{name}}</p>
+        <p ng-style="namestyle">{{name | namaste: 'HELLO!!': 'Namaste' | uppercase}}</p>
     </div>
 </body>
 </html>
