@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+	<script src="angular.min.js"></script>
+	<script src="repeatapp.js"></script>
+    <title>AngularJS Module 1 - Repeat</title>
+</head>
+<body ng-app="EmployeeListApp">
+    <center><h1>AngularJS Module-1 Repeat</h1></center>
+    <div ng-controller="EmployeeListController">
+        <h3>Employee List:</h3>
+        <ul>
+            <li ng-repeat="item in employeeList1">{{item}}</li>
+        </ul>
+        <ul>
+            <li ng-repeat="item in employeeList2">{{item.name | uppercase}}, {{item.qualification}}</li>
+        </ul>
+        <ul>
+            <li ng-repeat="item in employeeList2">{{$index + 1}} {{item.name | uppercase}}, {{item.qualification}}</li>
+        </ul>
+        <input id="Text1" type="text" ng-model="newName" placeholder="Name" />
+        <input id="Text2" type="text" ng-model="newqualification" placeholder="Qualification"/>
+        <input id="Button1" type="button" value="AddToList" ng-click="addToList()"/><br /><br />
+
+        
+        <input id="Text3" type="text" ng-model="search" placeholder="Search below List"/>
+        <ul>
+            <li ng-repeat="item in employeeList1 | filter : search">{{item}}</li>
+        </ul>
+    </div>
+</body>
+</html>
