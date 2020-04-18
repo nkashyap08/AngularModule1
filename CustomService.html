@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+	<script src="angular.min.js"></script>
+	<script src="customserviceapp.js"></script>
+    <title>AngularJS Module 1 - CustomService</title>
+</head>
+<body ng-app="EmployeeListApp">
+    <h1>AngularJS Module 1 - CustomService</h1>
+    <div ng-controller="EmployeeListAddController as itemAdder">
+        <input id="Text1" type="text" ng-model="itemAdder.itemName" placeholder="Name"/>
+        <input id="Text2" type="text" ng-model="itemAdder.itemqualification" placeholder="Qualification"/>
+        <input id="Button1" type="button" value="Add Name" ng-click="itemAdder.addItem();" />
+    </div>
+    <div ng-controller="EmployeeListShowController as showList">
+        <ol>
+            <li ng-repeat="item in showList.items">
+                {{item.name}}, {{item.qualification}}
+                <input id="Button2" type="button" value="Remove" ng-click="showList.removeItem($index);"/>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
